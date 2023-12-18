@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=League+Spartan:wght@400;500;700&family=Manrope:wght@500;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: var(--White);
+    background: url("images/bg-pattern-bottom-desktop.svg");
+    background-position: bottom right;
+    background-size: 73%;
+    background-repeat: no-repeat;
+}
+:root {
+    /* ### Primary */
+
+--Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+
+/* ### Neutral */
+
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+}
+
+.wrapper {
+    position: relative;
+    padding: 5rem 7rem;
+    /* background-color: rgb(240, 178, 178); */
+    background: url("images/bg-pattern-top-desktop.svg");
+    background-position: top left;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.wrapper .top-section {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper .top-section .left-hand {
+    max-width: 400px;
+}
+.wrapper .top-section .left-hand  h1 {
+    font-size: 3rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta)
+}
+.wrapper .top-section .left-hand  > p {
+    color:var(--Dark-Grayish-Magenta);
+    font-size: 15px;
+    margin-top: 2rem;
+    font-weight: 700;
+    font-family: 'League Spartan', sans-serif;
+    line-height: 1.4rem;
+}
+.wrapper .top-section .right-hand {
+    /* border: 2px solid green; */
+    width: 440px;
+    /* position: r; */
+}
+.wrapper .top-section .rating-container  {
+    /* background-color: red; */
+    position: relative;
+    /* width: 500px; */
+}
+.wrapper .top-section .rating-container .indi-rating-com {
+    /* position: absolute; */
+    background: var(--Light-Grayish-Magenta);
+    padding: 1rem 2rem;
+    display: flex;
+    border-radius: .5rem;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+.wrapper .top-section .rating-container .indi-rating-com:nth-child(1) {
+    position: relative;
+    right: 6rem;
+}
+.wrapper .top-section .rating-container .indi-rating-com:nth-child(2) {
+    position: relative;
+    right: 3rem;
+}
+.wrapper .top-section .rating-container .indi-rating-com  {
+    margin-bottom: 1rem;
+}
+.wrapper .top-section .rating-container .indi-rating-com > p{
+     margin-left: 2rem;
+     font-weight: 800;
+     font-family: 'League Spartan', sans-serif;
+     color: var(--Very-Dark-Magenta);
+}
+
+.wrapper .card-section {
+    position: relative;
+    top: 4rem;
+    display: flex;
+    width: 100%;
+    /* background-color: red; */
+    justify-content: space-between;
+}
+.wrapper .card-section .card {
+    background-color: var(--Very-Dark-Magenta);
+    /* border: 2px solid green; */
+    padding: 2rem 1.5rem 2rem;
+    border-radius: .5rem;
+    max-width: 340px;
+    /* margin-right: 2rem; */
+}
+.wrapper .card-section .card:nth-child(2) {
+    position: relative;
+    top: 20px;
+}
+.wrapper .card-section .card:nth-child(3) {
+    position: relative;
+    top: 40px;
+}
+
+.wrapper .card-section .card .top-part{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    width: 150px;
+}
+.wrapper .card-section .card .top-part img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.wrapper .card-section .card .top-part .details p:nth-child(1) { 
+    font-weight: 700;
+    font-family: 'League Spartan', sans-serif;
+
+}
+.wrapper .card-section .card .top-part .details p:nth-child(2) {
+    color: var(--Soft-Pink);
+    /* font-size: 14.1px; */
+    font-family: 'League Spartan', sans-serif;
+    margin-top: .3rem;
+}
+.wrapper .card-section .card p {
+    color: var(--White);
+}
+.wrapper .card-section .card .quote {
+    margin-top: 1.5rem;
+    line-height: 1.3rem;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+}
+
+
+@media (max-width: 600px) {
+    body {
+      background-size: 100%;
+    }
+  
+    .wrapper {
+      padding: 2rem;
+    }
+  
+    .wrapper .top-section {
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center;
+    }
+  
+    .wrapper .top-section .right-hand {
+      width: 100%; 
+    }
+  
+    .wrapper .card-section {
+        flex-direction: column;
+        flex-wrap: wrap; 
+        width: 100%;
+    }
+  
+    .wrapper .card-section .card {
+      
+      margin-bottom: 2rem; 
+    }
+    .wrapper .top-section .rating-container .indi-rating-com:nth-child(2) {
+        position: relative;
+        right: 0;
+    }
+    .wrapper .top-section .rating-container .indi-rating-com:nth-child(1) {
+        position: relative;
+        right: 0;   
+    }
+
+.wrapper .card-section .card {
+    background-color: var(--Very-Dark-Magenta);
+    /* border: 2px solid green; */
+    padding: 2rem 1.5rem 2rem;
+    border-radius: .5rem;
+    max-width: 100%;
+    /* margin-right: 2rem; */
+}
+.wrapper .top-section .rating-container {
+    margin-top: 3rem;
+}  
+.wrapper .top-section .rating-container .indi-rating-com {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.wrapper .top-section .rating-container .indi-rating-com  .stardiv {
+    display: flex;
+    flex-direction: row;
+}
+.wrapper .top-section .rating-container .indi-rating-com  .stardiv > img {
+    margin-left: .6rem;
+}
+.wrapper .top-section .rating-container .indi-rating-com > p {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .wrapper {
+    position: relative;
+    padding: 5rem 7rem;
+    /* background-color: rgb(240, 178, 178); */
+    background: url("images/bg-pattern-top-mobile.svg");
+    background-position: top left;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+body {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: var(--White);
+    background: url("images/bg-pattern-bottom-mobile.svg");
+    background-position: bottom right;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
